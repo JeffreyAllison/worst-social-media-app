@@ -21,41 +21,26 @@
   <main>
     <a class="all-profiles" href="../chat">Chatroom</a>
     <a class="all-profiles" href="../profiles">All profiles</a>
-    <div class="flex-column">
-      <img id="profileAvatar" src="" alt="no avatar" class="avatar">
-      <h3 id="profileName"></h3>
-    </div>
-    <label for="profileImage">
-      Upload Avatar:
-      <input type="file" name="profileImage" id="profileImage">
-    </label>
-    <div class="send-message container">
-      <h3>Send message now to user </h3>
-      <form>
-        <input name="message" class="inputMessage" />
-        <button>Post</button>
-      </form>
+    <div class="chatroom">
+      <div id="all-chats">
 
-    </div>
-    <div class="message-feed container">
-      <h3>Messages Received</h3>
-      <div class="messages">
 
+      </div>
+      <div class="input-area">
+        <form>
+          <input name="message" />
+          <button class="send-button">Send</button>
+        </form>
       </div>
 
     </div>
-    <div class="karma-voting container">
-      <h3 class="karma-class">Karma</h3>
-      <button class="addButton">Add</button>
-      <button class="decrementButton">decrement</button>
 
-    </div>
 
   </main>
   <footer>
 
   </footer>
-  <script type="module" src="./profile.js"></script>
+  <script type="module" src="./chat.js"></script>
 </body>
 
 </html>
