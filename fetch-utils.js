@@ -39,6 +39,15 @@ export async function getProfiles (type, trueFalse) {
   return response.body;
 }
 
+export async function getActivePlayers () {
+  const response = await client
+    .from('profiles')
+    .select('*')
+    .match({ is_playing: true });
+
+  return response.body;
+}
+
 
 
 export async function signupUser (email, password) {
