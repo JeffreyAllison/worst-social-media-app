@@ -39,7 +39,7 @@ window.addEventListener('load', async () => {
     .from('chats')
     .on('INSERT', payload => {
       const currentUser = getUser();
-      const chatItemOuterEl = document.createElement('div');
+      const chatDivEl = document.createElement('div');
       const chatSenderEl = document.createElement('p');
       const chatMessageEl = document.createElement('p');
 
@@ -49,11 +49,11 @@ window.addEventListener('load', async () => {
         chatSenderEl.classList.add('is-me');
       }
 
-      chatItemOuterEl.classList.add('chat-message');
+      chatDivEl.classList.add('chat-message');
       chatSenderEl.textContent = payload.new.sender_email;
       chatMessageEl.textContent = payload.new.text;
-      chatItemOuterEl.append(chatMessageEl, chatSenderEl);
-      allChatsEl.append(chatItemOuterEl);
+      chatDivEl.append(chatMessageEl, chatSenderEl);
+      allChatsEl.append(chatDivEl);
     })
     .subscribe();
 });
